@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block titre%}
+    Identifiez-vous
+{% endblock %}
+    
+{% block content %}
+<h1> Identifiez-vous: </h1>
+    
+<form action="{{ url_for('autoriser') }}" method="POST">
+    <label for="pseudo"> Pseudo : </label>    
+    <input type="text" name="pseudo" id="pseudo" value="sylvia"> <br>
+
+    <label for="mdp"> Mot de passe : </label>
+    <input type="text" name="mdp" id="mdp" value="sylvia"> <br>
+
+    <button type="submit"> Me connecter</button>
+</form>     
+{% endblock %}   

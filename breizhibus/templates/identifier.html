@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block titre%}
+    bonjour
+{% endblock %}
+
+{% block content%}
+    {% if reponse %}
+    
+        <h2>Bienvenue agent de gestion de base de données Breizhibus {{ qui }}</h2>
+
+        <a href = "{{url_for('ajouter')}}">ajouter un bus</a>
+        <a href = "{{url_for('modifier')}}">modifier un bus</a>
+        <a href = "{{url_for('supprimer')}}">supprimer un bus</a>
+
+    {% else %}
+        <h2> Vous n'avez pas les droits d'accès ou mal tapé votre pseudo et/ou mot de passe </h2>
+    {% endif %}
+<p>vous êtes connecté</p>
+
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <table>
+        <thead>
+            <tr>
+                <th>Nom de la ligne</th>
+                <th>Nom de l'arrêt</th>
+                <th>Adresse de la l'arrêt</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for l in lignes %}
+                <tr>
+                    <td>{{ l[0] }}</td>
+                    <td>{{ l[1] }}</td>
+                    <td>{{ l[2] }}</td>
+
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+
+{% endblock %}
